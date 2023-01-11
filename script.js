@@ -5,6 +5,8 @@ function getComputerChoice() {
     return choices[~~(Math.random() * choices.length)];
 }
 
+let getPlayerChoice = prompt("Which weapon would you choose? Rock, Paper, or Scissors?");
+
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     computerSelection = getComputerChoice().toLowerCase();
@@ -21,4 +23,8 @@ function playRound(playerSelection, computerSelection) {
 /*const playerSelection = "rock";
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));*/
+
+function game() {
+
+}
 
