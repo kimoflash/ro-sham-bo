@@ -8,7 +8,7 @@ function getComputerChoice() {
 let getPlayerChoice = prompt("Which weapon would you choose? Rock, Paper, or Scissors?");
 
 function playRound(playerSelection, computerSelection) {
-    playerSelection = playerSelection.toLowerCase();
+    playerSelection = getPlayerChoice.toLowerCase();
     computerSelection = getComputerChoice().toLowerCase();
 
     if (playerSelection == computerSelection) {
@@ -20,11 +20,13 @@ function playRound(playerSelection, computerSelection) {
     };
 }
 
+console.log(playRound());
+
 /*const playerSelection = "rock";
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));*/
 
-function game() {
+/*function game() {
 
-}
+}*/
 
