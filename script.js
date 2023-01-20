@@ -34,10 +34,21 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     for (let i = 0; i < 5; i++) {
         console.log(playRound());
+        if (i === 4) {
+            if (playerScore > computerScore) {
+                console.log("Game Over. YOU WIN!");
+            } else if (playerScore < computerScore) {
+                console.log("Game Over. COMPUTER WINS!")
+            } else if (playerScore === computerScore) {
+                console.log("Game Over. IT'S A TIE!")
+            }
+        }
      }
 }
 
 game();
+
+
 
 /*function getScore() {
     if (playerSelection == computerSelection) {
