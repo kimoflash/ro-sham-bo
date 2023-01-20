@@ -5,12 +5,11 @@ function getComputerChoice() {
     return choices[~~(Math.random() * choices.length)];
 }
 
-let getPlayerChoice = prompt("Which weapon would you choose? Rock, Paper, or Scissors?");
-
 let playerScore = 0;
 let computerScore = 0;
 
 function playRound(playerSelection, computerSelection) {
+    let getPlayerChoice = prompt("Which weapon would you choose? Rock, Paper, or Scissors?");
     playerSelection = getPlayerChoice.toLowerCase();
     computerSelection = getComputerChoice().toLowerCase();
     
@@ -36,11 +35,11 @@ function game() {
         console.log(playRound());
         if (i === 4) {
             if (playerScore > computerScore) {
-                console.log("Game Over. YOU WIN!");
+                console.log("Game Over. ALL HAIL! YOU WIN!");
             } else if (playerScore < computerScore) {
-                console.log("Game Over. COMPUTER WINS!")
+                console.log("Game Over. AW, SNAP! COMPUTER WINS.")
             } else if (playerScore === computerScore) {
-                console.log("Game Over. IT'S A TIE!")
+                console.log("Game Over. IT'S A TIE! HIT F5 AND PLAY ONE MORE ROUND!")
             }
         }
      }
