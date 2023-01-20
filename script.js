@@ -31,22 +31,13 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-console.log(playRound());
-console.log(playRound());
-console.log(playRound());
-console.log(playRound());
-console.log(playRound());
-
-/*function game() {
-
+function game() {
     for (let i = 0; i < 5; i++) {
-        if (i == 1) {
-            playRound();
-            
-        }
-    } 
+        console.log(playRound());
+     }
+}
 
-}*/
+game();
 
 /*function getScore() {
     if (playerSelection == computerSelection) {
