@@ -46,26 +46,3 @@ function game() {
 }
 
 game();
-
-
-
-/*function getScore() {
-    if (playerSelection == computerSelection) {
-        playerScore += 1;
-        computerScore += 1;
-        return `It's a tie! Player's Score: ${playerScore} Computer's Score: ${computerScore}.`
-    } else if (playerSelection == "rock" && computerSelection == "scissors" || 
-    playerSelection == "paper" && computerSelection == "rock" || 
-    playerSelection == "scissors" && computerSelection == "paper") {
-        playerScore += 1;
-        return `Player's Score: ${playerScore} Computer's Score: ${computerScore}.`
-    } else {
-        computerScore += 1;
-        return `Player's Score: ${playerScore} Computer's Score: ${computerScore}.`
-    }
-
-}*/
-
-/*const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));*/
