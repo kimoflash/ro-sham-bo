@@ -10,6 +10,7 @@ let computerScore = 0;
 
 function playRound(playerSelection, computerSelection) {
     let getPlayerChoice = prompt("Which weapon would you choose? Rock, Paper, or Scissors?");
+
     playerSelection = getPlayerChoice.toLowerCase();
     computerSelection = getComputerChoice().toLowerCase();
     
@@ -28,9 +29,10 @@ function playRound(playerSelection, computerSelection) {
         computerScore++;
         return `You lose! ${playerSelection[0].toUpperCase() + playerSelection.substring(1)} is weak against ${computerSelection}. Your Score: ${playerScore}, Computer Score: ${computerScore}`;    
     }
+
 }
 
-console.log(playRound());
+playRound();
 
 /*
 function game() {
