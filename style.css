@@ -1,0 +1,45 @@
+body {
+    background-color: black;
+    display: flex;
+    height: 700px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    gap: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border-color: azure;
+    border-style: double;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 150px;
+}
+
+#result,
+#score {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    justify-content: center;
+    color: aliceblue;
+    text-align: center;
+}

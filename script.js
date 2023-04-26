@@ -26,12 +26,13 @@ playerChoiceBtn.forEach((button) => {
 function playRound(playerSelection, computerSelection) {
     const playerChoice = playerSelection.toLowerCase();
     const computerChoice = computerSelection.toLowerCase();
+    const runningScore = `Your Score: ${playerScore} Computer Score: ${computerScore}`;
  
     if (playerChoice == computerChoice) {
         playerScore++;
         computerScore++;
-        const tie = `It's a tie! You both chose ${playerSelection.toUpperCase()}. Your Score: ${playerScore}, Computer Score: ${computerScore}`;
-        showResult(tie);
+        const tie = `It's a tie! You both chose ${playerSelection.toUpperCase()}.`; 
+        showResult(tie, runningScore);
     } else if (
         (playerChoice == "rock" && computerChoice == "scissors") || 
         (playerChoice == "paper" && computerChoice == "rock") || 
@@ -49,9 +50,11 @@ function playRound(playerSelection, computerSelection) {
     showWinner(playerScore, computerScore);
 }
 
-function showResult(message) {
+function showResult(message, count) {
     const result = document.getElementById('result');
+    const score = document.getElementById('score');
     result.textContent = message;
+    score.textContent = count;
 }
 
 function showWinner(playerScore, computerScore) {
