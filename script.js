@@ -26,35 +26,39 @@ playerChoiceBtn.forEach((button) => {
 function playRound(playerSelection, computerSelection) {
     const playerChoice = playerSelection.toLowerCase();
     const computerChoice = computerSelection.toLowerCase();
-    const runningScore = `Your Score: ${playerScore} Computer Score: ${computerScore}`;
  
     if (playerChoice == computerChoice) {
         playerScore++;
         computerScore++;
         const tie = `It's a tie! You both chose ${playerSelection.toUpperCase()}.`; 
-        showResult(tie, runningScore);
+        showResult(tie);
     } else if (
         (playerChoice == "rock" && computerChoice == "scissors") || 
         (playerChoice == "paper" && computerChoice == "rock") || 
         (playerChoice == "scissors" && computerChoice == "paper")
         ) {
         playerScore++;
-        const win = `You win! ${playerSelection[0].toUpperCase() + playerSelection.substring(1)} beats ${computerSelection}. Your Score: ${playerScore}, Computer Score: ${computerScore}`;
-        showResult(win);
+        const win = `You win! ${playerSelection[0].toUpperCase() + playerSelection.substring(1)} beats ${computerSelection}.`
+        showResult(win  );
     } else {
         computerScore++;
-        const lose = `You lose! ${playerSelection[0].toUpperCase() + playerSelection.substring(1)} is weak against ${computerSelection}. Your Score: ${playerScore}, Computer Score: ${computerScore}`;
+        const lose = `You lose! ${playerSelection[0].toUpperCase() + playerSelection.substring(1)} is weak against ${computerSelection}.`;
         showResult(lose);
     }
-
+    const runningScore = `Your Score: ${playerScore} Computer Score: ${computerScore}`;
+    showScore(runningScore);
     showWinner(playerScore, computerScore);
 }
 
 function showResult(message, count) {
     const result = document.getElementById('result');
-    const score = document.getElementById('score');
     result.textContent = message;
-    score.textContent = count;
+    
+}
+
+function showScore(currentScore) {
+    const score = document.getElementById('score');
+    score.textContent = currentScore;
 }
 
 function showWinner(playerScore, computerScore) {
@@ -67,3 +71,4 @@ function showWinner(playerScore, computerScore) {
         prompt(computerWins);
     }
 }
+
