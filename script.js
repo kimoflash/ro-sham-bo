@@ -46,6 +46,7 @@ function playRound(playerSelection, computerSelection) {
         showResult(lose);
     }
 
+    showWinner(playerScore, computerScore);
 }
 
 function showResult(message) {
@@ -53,32 +54,13 @@ function showResult(message) {
     result.textContent = message;
 }
 
-
-// THIS IS NOT YET WORKING! SHOULD BE SHOWING THE WINNER THAT SCORES 5 FIRST
 function showWinner(playerScore, computerScore) {
     const playerWins = "ALL HAIL! YOU WIN! Hit F5 to play one more round!";
     const computerWins = "AW, SNAP! COMPUTER WINS. Hit F5 to play one more round!";
 
-    if (playerScore = 5) {
-        winnerResult.textContent = playerWins;
+    if (playerScore == 5) {
+        prompt(playerWins);
     } else if (computerScore == 5) {
-        winnerResult.textContent = computerWins;
+        prompt(computerWins);
     }
 }
-
-/*
-function game() {
-    for (let i = 0; i < 5; i++) {
-        console.log(playRound());
-        if (i === 4) {
-            if (playerScore > computerScore) {
-                console.log("Game Over. ALL HAIL! YOU WIN!");
-            } else if (playerScore < computerScore) {
-                console.log("Game Over. AW, SNAP! COMPUTER WINS.")
-            } else if (playerScore === computerScore) {
-                console.log("Game Over. IT'S A TIE! HIT F5 AND PLAY ONE MORE ROUND!")
-            }
-        }
-     }
-}
-*/ 
